@@ -52,33 +52,33 @@ pgsql_connection = pgsql_engine.connect()
 
 
 # # root url
-# @app.route('/')
-# def hello_world():
-#    return render_template('index.html')
+@app.route('/')
+def hello_world():
+   return render_template('index.html')
 
 
 # # /PostgreSQL url
-# @app.route('/PostgreSQL')
-# def postgres():
+@app.route('/PostgreSQL')
+def postgres():
 
-#     # Fetching Data From Books Table
-#     query = db.select([Books])
-#     ResultProxy = pgsql_connection.execute(query)
-#     Result = ResultProxy.fetchall()
+    # Fetching Data From Books Table
+    query = db.select([Books])
+    ResultProxy = pgsql_connection.execute(query)
+    Result = ResultProxy.fetchall()
 
-#     return render_template('/postgres.html', demo = Result)
+    return render_template('/postgres.html', demo = Result)
     
 
 # # /MySQL url
-# @app.route('/MySQL')
-# def mysql():
+@app.route('/MySQL')
+def mysql():
 
-#     # Fetching Data From Customers Table
-#     query = db.select([Customers])
-#     ResultProxy = mysql_connection.execute(query)
-#     Result = ResultProxy.fetchall()
+    # Fetching Data From Customers Table
+    query = db.select([Customers])
+    ResultProxy = mysql_connection.execute(query)
+    Result = ResultProxy.fetchall()
 
-#     return render_template("mysql.html",result=Result)
+    return render_template("mysql.html",result=Result)
 
 
 # Starting the app
