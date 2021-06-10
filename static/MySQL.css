@@ -1,0 +1,25 @@
+body , .container {
+    background-color: #f8f3f3 ;
+    margin-right:0px;
+}
+header, footer {
+    background-color:lightblue;
+    text-align: center;
+    padding:30px;
+    color:black;
+    width:100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+
+
+#head {
+   text-align: center;
+   background-color: lightblue;
+   font-family: sans-serif;
+   font-weight: bolder;
+   font-size: larger;
+   padding:10px;
+}

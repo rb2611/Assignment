@@ -21,7 +21,7 @@ meta = MetaData()
 
 # BOOKS Table
 Books = Table(
-   'BOOKS', meta, 
+   'books', meta, 
    Column('Book_ID', Integer, primary_key = True), 
    Column('Title', String(100)), 
    Column('Author', String(100)),
