@@ -11,10 +11,13 @@ db = SQLAlchemy(app)
 
 
 # MySQL engine that connects Database via sqlalchemy
-mysql_engine = create_engine("mysql+mysqlconnector://root:Ram_1234@localhost/TUTORIALS", echo = True)
+mysql_engine = create_engine("mysql+mysqlconnector://{username}:{password}@{host}/{database_name}", echo = True)
 
 # PGSQL engine that connects database via sqlalchemy
-pgsql_engine = create_engine("postgresql://rbquixotic:rbquixotic@localhost:5432/alchemy", echo = True)
+pgsql_engine = create_engine("postgresql://{username}:{password}@{host}:{port}/{database_name}", echo = True)
+
+# eg. for creating engine
+# pgsql_engine = create_engine("postgresql://root:12345678@localhost:5432/mydb", echo = True)
 
 meta = MetaData()
 
@@ -83,4 +86,4 @@ def mysql():
 
 # Starting the app
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug = False)
